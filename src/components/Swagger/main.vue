@@ -6,6 +6,7 @@
 <script>
   import SwaggerUIBundle from 'swagger-ui'
   import SwaggerUIStandalonePreset from 'swagger-ui/dist/swagger-ui-standalone-preset'
+  import _ from 'lodash'
   const DOM_ID='#uvi-swagger-ui';
   export default {
     props: {
@@ -29,7 +30,7 @@
     },
     methods: {
       createSwaggerUI(){
-        if(this.urls){
+        if(!_.isEmpty(this.urls)){
           const ui = SwaggerUIBundle({
             urls:this.urls,
             dom_id: DOM_ID,
