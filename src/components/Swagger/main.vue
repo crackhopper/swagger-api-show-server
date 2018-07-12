@@ -41,7 +41,8 @@
             plugins: [
               SwaggerUIBundle.plugins.DownloadUrl
             ],
-            layout: "StandaloneLayout"
+            layout: "StandaloneLayout",
+	    validatorUrl: null
           });
           this.$Swagger = ui;
         }
