@@ -3,6 +3,16 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+    externals:{
+        'vue': 'Vue',
+        'swagger-ui': 'SwaggerUIBundle',
+        'swagger-ui/dist/swagger-ui-standalone-preset':'SwaggerUIStandalonePreset',
+        'iview':'iview',
+        'vue-router':'VueRouter',
+        'vuex':'Vuex',
+        'axios':'axios',
+        'lodash':'_',
+    },
     entry: {
         main: './src/main',
         vendors: './src/vendors'
